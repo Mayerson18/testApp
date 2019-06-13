@@ -351,8 +351,8 @@ $GREEN: #61ce70;
   font-size: 0.8em;
 }
 .body {
-  max-height: 50vh;
-  height: 50vh;
+  max-height: 40vh;
+  height: 40vh;
   overflow-y: scroll;
 }
 .tableProducts {
@@ -374,13 +374,17 @@ $GREEN: #61ce70;
   align-items: center;
   padding-top: 1em;
   padding-bottom: 1em;
+  margin: 1em 1em;
+  width: 94%;
+  border-radius: 5px;
 }
 .pagar {
   margin: 0;
   color: #fff;
   font-style: italic;
-  font-size: 2em;
+  font-size: 1.5em;
   cursor: pointer;
+  
 }
 .image {
   width: 100px;
@@ -407,6 +411,12 @@ $GREEN: #61ce70;
 }
 .price {
   width: 100px;
+}
+
+.body {
+  margin: 1em;
+  border-radius: 5px;
+  border: 1px solid #ddd;
 }
 </style>
 

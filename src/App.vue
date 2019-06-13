@@ -40,4 +40,8 @@ export default {
 body {
   margin-top: 0;
 }
+
+.vs__dropdown-toggle {
+  border-radius: 17px!important;
+}
 </style>

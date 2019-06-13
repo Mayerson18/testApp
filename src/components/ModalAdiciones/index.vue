@@ -236,7 +236,7 @@ export default {
   margin-top: 0;
 }
 .header {
-    display: block;
+  display: block;
 }
 .container-positions {
     border-radius: 5px;
@@ -248,26 +248,32 @@ export default {
   margin-bottom: 2em;
 }
 .right {
-    width: 30%;
+  width: 30%;
   border-left: 1px solid #ddd;
   padding: 0px 1em;
   padding-top: 1em;
+  max-height: 35vh;
+  overflow-y: scroll;
 }
 .left {
-    width: 20%;
+  width: 20%;
   border-right: 1px solid #ddd;
   height: 35vh;
   padding: 0px 1em;
   padding-top: 1em;
+  max-height: 35vh;
+  
 }
 .middle {
-    width: 45%;
+  width: 45%;
   font-size: 0.9em;
   padding: 0px 1em;
   padding-top: 1em;
+  max-height: 35vh;
+  overflow-y: scroll;
 }
 .container-selecteds {
-    border-radius: 5px;
+  border-radius: 5px;
   border: 1px solid #ddd;
   height: 40vh;
   width: 85%;

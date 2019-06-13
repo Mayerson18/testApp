@@ -102,9 +102,10 @@ export default {
   }
 
   .footer {
-    width: 100%;
-    border-radius: 5%;
     border: 1px solid #ddd;
     font-size: .8em;
+    margin: 0px 1em;
+    width: auto;
+    border-radius: 5px;
   }
 </style>
