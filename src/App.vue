@@ -1,12 +1,22 @@
 <template>
   <div id="app">
+    <Home/>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <!-- <router-link to="/about">About</router-link> -->
     </div>
-    <router-view/>
+    <!-- <router-view/> -->
   </div>
 </template>
+<script>
+import Home from './views/Home.vue'
+export default {
+  name: 'app',
+  components: {
+    Home
+  }
+}
+</script>
+
 
 <style lang="scss">
 #app {
@@ -17,7 +27,7 @@
   color: #2c3e50;
 }
 #nav {
-  padding: 30px;
+  
   a {
     font-weight: bold;
     color: #2c3e50;
@@ -25,5 +35,9 @@
       color: #42b983;
     }
   }
+}
+
+body {
+  margin-top: 0;
 }
 </style>
