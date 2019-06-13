@@ -3,8 +3,8 @@
     <modal
       name="modalAdiciones"
       :clickToClose="false"
-      :minHeight="600"
-      :height="600"
+      :minHeight="350"
+      :height="350"
       :width="'80%'"
     >
       <div class="header">
@@ -112,7 +112,7 @@ export default {
     addItem(item) {
       if (item.name) {
         //Adiciones
-        var add_aux = Object.assign({}, this.$store.state.productSelected);
+        let add_aux = Object.assign({}, this.$store.state.productSelected);
         var index = add_aux.additions.findIndex(function (a) {
           return a.id === item.id;
         });
@@ -135,8 +135,8 @@ export default {
           return a.status && a.status === 1;
         });
       } else {
-        var add_aux = Object.assign({}, this.$store.state.productSelected);
-        var index = add_aux.modifications.findIndex(function (a) {
+        let add_aux = Object.assign({}, this.$store.state.productSelected);
+        let index = add_aux.modifications.findIndex(function (a) {
           return a.id === item.id;
         });
         var modifications = add_aux.modifications;
@@ -146,7 +146,7 @@ export default {
         } else {
           modifications[index].qty = 1
         }
-        var id = this.$store.state.productSelected.id;
+        let id = this.$store.state.productSelected.id;
         this.$store.state.ventas = [
           ...this.$store.state.ventas.filter(function (element) {
             return element.id !== id;
@@ -178,7 +178,7 @@ export default {
           return a.status && a.status === 1;
         });
       } else {
-        var index = this.$store.state.productSelected.modifications.findIndex(function (a) {
+        let index = this.$store.state.productSelected.modifications.findIndex(function (a) {
           return a.id === item.id
         });
         var modifications = this.$store.state.productSelected.modifications;
@@ -186,7 +186,7 @@ export default {
         console.log(modifications[index])
         modifications[index].status = 0;
         modifications[index].qty = 0;
-        var id = this.$store.state.productSelected.id;
+        let id = this.$store.state.productSelected.id;
         this.$store.state.ventas = [
           ...this.$store.state.ventas.filter(function (element) {
             return element.id !== id;
@@ -200,6 +200,7 @@ export default {
     },
     goBack() {
       this.itemsSelecteds = [];
+      this.itemsSelectedsModificaciones = [];
       this.$modal.hide('modalAdiciones');
     }
   },
@@ -255,7 +256,7 @@ export default {
 .left {
     width: 20%;
   border-right: 1px solid #ddd;
-  height: 100vh;
+  height: 35vh;
   padding: 0px 1em;
   padding-top: 1em;
 }

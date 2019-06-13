@@ -84,7 +84,6 @@ import helperCommas from '../../helpers/commas';
 import helperVentas from '../../helpers/ventas';
 import helperConfig from '../../helpers/config';
 import helperAlert from '../../helpers/alert';
-import config from '../../../config/config';
 import axios from 'axios'
 
 import ModalPago from '../ModalPago/index'
@@ -165,7 +164,7 @@ export default {
           add_aux[index]
         ]
       } else {
-        var add_aux = Object.assign({}, this.$store.state.ventas);
+        let add_aux = Object.assign({}, this.$store.state.ventas);
 
         if (add_aux[index].modifications[index2].qty <= 1) {
           add_aux[index].modifications[index2].qty = 0;
@@ -203,8 +202,25 @@ export default {
       else
         this.statusAdditions = -1
     },
-    sendCommanda() {
-
+    async sendCommanda() {
+      let table = this.$store.state.table.id;
+      let zone = this.$store.state.table.id_seccion;
+      let products = this.getIdProducts()
+      let data = {
+        zone: zone,
+        table: table,
+        products: products
+      };
+      console.log(JSON.stringify(data));
+      try {
+        const res = await axios(this.getConfig('post', '/take-order/order/command', data))
+        console.log('comanda')
+        console.log(res)
+        this.openModal()
+      } catch (error) {
+        console.log('error')
+        console.log(error)
+      }
     },
     fixName(name) {
       return name.length > 10 ? name.substring(0, 10) : name;
@@ -269,7 +285,8 @@ export default {
     getConfig: helperConfig.getConfig,
     numberWithCommas: helperCommas.numberWithCommas,
     getTotalFixed: helperVentas.getTotalFixed,
-    getPropina: helperVentas.getPropina
+    getPropina: helperVentas.getPropina,
+    getIdProducts: helperVentas.getIdProducts
   },
   mounted() {
     console.log(this.$store.state.statusComanda)

@@ -45,6 +45,7 @@ export default {
         //console.log(data)
         this.$store.state.allProducts = data
         this.$store.state.products = data
+        this.$store.state.statusComanda =  res.data.command
         localStorage.setItem('products', JSON.stringify(data))
       } catch (error) {
         console.log('error')

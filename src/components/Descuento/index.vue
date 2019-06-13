@@ -5,10 +5,11 @@
       :clickToClose="false"
       :minHeight="500"
       :height="500"
+      :width="400"
     >
       <font-awesome-icon
-        icon="chevron-left"
-        :style="{ color: '#aaa', cursor: 'pointer', paddingLeft: 10, paddingLeft: 10, paddingRight: 5 }"
+        icon="times"
+        :style="{ position: 'absolute', color: '#aaa', cursor: 'pointer', paddingTop: 10, paddingRight: 15, right: 0 }"
         size="lg"
         @click="goBack()"
       />
@@ -99,7 +100,7 @@ export default {
     align-items: center;
   }
   .container-calculator {
-    width: 50%;
+    width:74%;
   }
   .container2 {
     display: -webkit-box;
@@ -120,6 +121,7 @@ export default {
     margin-bottom: 1em;
   }
   .modelDescuento {
+        width: 57%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -130,9 +132,11 @@ export default {
     padding-right: 0;
     border-radius: 5px;
     background-color: #ddd;
-    width: 44%;
+    
   }
   .boton {
+    
+    border-radius: 5px;
     padding-left: 1em;
     margin-top: 1em;
     background-color: #61ce70;
@@ -145,8 +149,10 @@ export default {
     align-items: center;
     padding-top: .1em;
     padding-bottom: .3em;
+    padding: 1em 0px;
   }
   .pagar {
+    text-align: center;
     color: #fff;
     font-style: italic;
     font-size: 1.5em;

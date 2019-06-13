@@ -88,7 +88,6 @@ export default {
     border-radius: 5px;
     border: 1px solid #ddd;
     padding: 1em;
-    margin-right: 1em;
   }
   .item-container {
     cursor: pointer;

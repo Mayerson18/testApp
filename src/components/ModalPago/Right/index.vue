@@ -191,6 +191,7 @@ export default {
     ]),
   },
   mounted() {
+    this.openConnection()
   }
 }
 </script>
