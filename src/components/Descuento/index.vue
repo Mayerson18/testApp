@@ -9,7 +9,7 @@
     >
       <font-awesome-icon
         icon="times"
-        :style="{ position: 'absolute', color: '#aaa', cursor: 'pointer', paddingTop: 10, paddingRight: 15, right: 0 }"
+        :style="{ position: 'absolute', color: 'black', cursor: 'pointer', paddingTop: 10, paddingRight: 15, right: 0 }"
         size="lg"
         @click="goBack()"
       />

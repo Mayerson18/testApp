@@ -3,7 +3,7 @@
     <p class="p" style="padding-left: .5em">Cantidad</p>
     <p class="p end">Producto</p>
     <p class="p end">Total</p>
-    <div class="p center"><font-awesome-icon
+    <div class="p center special"><font-awesome-icon
       icon="times-circle"
       :style="{ color: '#ddd', cursor: 'pointer', paddingTop: 10, paddingRight: '1.5em' }" 
       size="lg"
@@ -33,6 +33,11 @@ export default {
 </script>
 
 <style scoped>
+
+  .special {
+    padding-right: 1em;
+  }
+
   .end {
     display: flex;
     justify-content: flex-end;
@@ -49,12 +54,8 @@ export default {
   }
 
   .header {
-    /* padding-left: 1em;
-    padding-right: 1em; */
     display: flex;
-    /* justify-content: space-between; */
     width: 100%;
-    border-radius: 5%;
     border: 1px solid #ddd;
   }
 </style>

@@ -44,4 +44,13 @@ body {
 .vs__dropdown-toggle {
   border-radius: 17px!important;
 }
+
+.vs__search {
+  color: #ddd!important;
+  padding-left: 2em!important;
+}
+
+.vs__selected {
+  padding-left: 2em!important;
+}
 </style>

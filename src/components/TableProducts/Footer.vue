@@ -107,5 +107,6 @@ export default {
     margin: 0px 1em;
     width: auto;
     border-radius: 5px;
+    
   }
 </style>

@@ -63,8 +63,8 @@ export default {
     getConfig: helperConfig.getConfig,
   },
   mounted() {
-    this.getProducts()
-    //this.getProductsLocal()
+    //this.getProducts()
+    this.getProductsLocal()
   }
 }
 </script>

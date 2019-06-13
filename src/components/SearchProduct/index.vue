@@ -5,7 +5,7 @@
     <input type="text" v-model="search" class="input" placeholder="Por favor digité su busqueda">
     <font-awesome-icon 
         icon="search" 
-        :style="{ color: '#aaa', cursor: 'pointer', }" 
+        :style="{ color: 'black', cursor: 'pointer', }" 
         size="lg"
       />
   </div>
